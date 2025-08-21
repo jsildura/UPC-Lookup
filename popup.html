@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>UPC Lookup Tool</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Moved all styles to main styles.css */
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <div class="glass-backdrop"></div>
+    
+    <div class="header">
+      <div class="header-blur"></div>
+      <div class="header-content">
+        <div class="toolbar">
+          <div class="title-section">
+            <div class="app-icon">
+              <img src="icons/barcode.png" alt="UPC Lookup" width="24" height="24">
+            </div>
+            <h1>UPC Lookup Tool</h1>
+          </div>
+          <div class="toolbar-actions action-group">
+            <!-- Theme Toggle Button -->
+            <button id="themeToggleBtn" class="icon-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+              <!-- Sun (light) icon - Fluent rounded -->
+              <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="4"></circle>
+                <line x1="12" y1="2" x2="12" y2="4"></line>
+                <line x1="12" y1="20" x2="12" y2="22"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="2" y1="12" x2="4" y2="12"></line>
+                <line x1="20" y1="12" x2="22" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <!-- Moon (dark) icon - Fluent crescent -->
+              <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M20.5 14.5A8.5 8.5 0 1 1 11.5 3.5a7 7 0 1 0 9 11z"></path>
+              </svg>
+            </button>
+            <!-- License Status Badge -->
+            <span id="licenseStatusBadge" class="chip chip-status" title="License status">
+              <span id="licenseStatusDot" class="chip-dot"></span>
+              <span id="licenseStatusText">Inactive</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="search-container">
+          <div class="search-input-wrapper" role="search">
+            <div class="input-glass-bg"></div>
+            <svg class="search-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="url(#gradSearch)" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="gradSearch" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2ED4A6"/>
+                  <stop offset="55%" stop-color="#21C6F3"/>
+                  <stop offset="100%" stop-color="#0AA0FF"/>
+                </linearGradient>
+              </defs>
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="upcInput" placeholder="Search for UPC here" maxlength="50" aria-label="UPC code input">
+            <button id="clearSearchBtn" class="clear-search-btn" title="Clear Search/Cache" aria-label="Clear search and cache">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+          <span id="cacheBadge" class="cache-badge">
+            <span>Cached</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="panel" data-panel="barcode-lookup">
+        <div class="panel-glass-bg"></div>
+        <div class="panel-header">
+          <div class="panel-header-blur"></div>
+          <div class="panel-title">
+            <button class="pane-toggle-btn" id="toggle-barcode-lookup" aria-label="Toggle BarcodeLookup" title="Enable/Disable BarcodeLookup">
+              <!-- Enabled (power on) icon -->
+              <svg class="toggle-icon-enabled" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="9,12 12,15 15,9"/>
+              </svg>
+              <!-- Disabled (power off) icon -->
+              <svg class="toggle-icon-disabled" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="4.22" y1="4.22" x2="19.78" y2="19.78"/>
+              </svg>
+            </button>
+            <div class="provider-icon barcode-lookup-icon"></div>
+            <span class="status-dot" id="status-barcode-lookup" title="Ready" aria-label="BarcodeLookup status"></span>
+            <span>BarcodeLookup</span>
+          </div>
+          <div id="barcodeSize" class="size-badge" style="display: none;"></div>
+        </div>
+        <div class="panel-content" id="barcodeLookupContent">
+          <div class="empty-state">
+            <div class="empty-icon barcode-lookup-empty">
+              <img src="https://www.barcodelookup.com/assets/images/barcode-lookup-logo.webp" width="48" height="32" alt="Barcode Lookup logo">
+              <div class="barcode-text-container">
+                <span class="barcode-logo">&nbsp;BARCODE</span>
+                <span class="lookup-logo">&nbsp;LOOKUP</span>
+              </div>
+            </div>
+            <div class="empty-text">Enter a UPC code to search for product information</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="upc-itemdb">
+        <div class="panel-glass-bg"></div>
+        <div class="panel-header">
+          <div class="panel-header-blur"></div>
+          <div class="panel-title">
+            <button class="pane-toggle-btn" id="toggle-upc-itemdb" aria-label="Toggle UPCItemDB" title="Enable/Disable UPCItemDB">
+              <!-- Enabled (power on) icon -->
+              <svg class="toggle-icon-enabled" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="9,12 12,15 15,9"/>
+              </svg>
+              <!-- Disabled (power off) icon -->
+              <svg class="toggle-icon-disabled" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="4.22" y1="4.22" x2="19.78" y2="19.78"/>
+              </svg>
+            </button>
+            <div class="provider-icon upc-itemdb-icon"></div>
+            <span class="status-dot" id="status-upc-itemdb" title="Ready" aria-label="UPCItemDB status"></span>
+            <span>UPCItemDB</span>
+          </div>
+          <div id="upcItemDbSize" class="size-badge" style="display: none;"></div>
+        </div>
+        <div class="panel-content" id="upcItemDbContent">
+          <div class="empty-state">
+            <div class="empty-icon upcitemdb-empty">
+              <img src="https://i.imgur.com/UvqpcSG.png" width="100" height="auto" alt="UPCItemDB logo">
+            </div>
+            <div class="empty-text">Enter a UPC code to search for product information</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="go-upc">
+        <div class="panel-glass-bg"></div>
+        <div class="panel-header">
+          <div class="panel-header-blur"></div>
+          <div class="panel-title">
+            <button class="pane-toggle-btn" id="toggle-go-upc" aria-label="Toggle Go-UPC" title="Enable/Disable Go-UPC">
+              <!-- Enabled (power on) icon -->
+              <svg class="toggle-icon-enabled" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="9,12 12,15 15,9"/>
+              </svg>
+              <!-- Disabled (power off) icon -->
+              <svg class="toggle-icon-disabled" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="4.22" y1="4.22" x2="19.78" y2="19.78"/>
+              </svg>
+            </button>
+            <span class="status-dot" id="status-go-upc" title="Ready" aria-label="Go-UPC status"></span>
+            <span>Go-UPC</span>
+          </div>
+          <div id="goUpcSize" class="size-badge" style="display: none;"></div>
+        </div>
+        <div class="panel-content" id="goUpcContent">
+          <div class="empty-state">
+            <div class="empty-icon go-upc-empty">
+              <img src="https://go-upc.com/img/logo.svg" width="100" height="auto" alt="Go-UPC logo">
+            </div>
+            <div class="empty-text">Enter a UPC code to search for product information</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Persistent Footer -->
+  <footer class="app-footer">
+    <div class="footer-glass-bg"></div>
+    <div class="footer-content">
+      <span class="footer-text" id="authorInfo"></span>
+    </div>
+  </footer>
+
+  <script src="license.js"></script>
+  <script type="module" src="popup.js"></script>
+
+  <!-- Modal Image Viewer -->
+  <div id="imageModal" class="image-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <div class="modal-glass-bg"></div>
+      <button class="modal-close" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="modal-image-container">
+        <img id="modalImage" class="modal-image" src="" alt="Product Image">
+      </div>
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+  </div>
+</body>
+</html>
