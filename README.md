@@ -38,6 +38,7 @@ git clone https://github.com/jsildura/UPC-Lookup.git
 ```
 or
 Download Here [Link](https://github.com/user-attachments/files/21915515/UPC_Lookup.v1.1.zip)
+
 Unzip the file
 
 1. Open extensions page:
