@@ -30,12 +30,24 @@ A Chrome browser extension that provides dual-pane UPC barcode lookup functional
 - Product images
 - UPC validation and verification
 
-## Installation
 
-1. **Download the extension files** to a local folder
-2. **Open Chrome** and navigate to `chrome://extensions/`
-3. **Enable Developer mode** (toggle in the top right)
-4. **Click "Load unpacked"** and select the extension folder
+## Installation Chrome/Edge/Brave/Firefox
+```bash
+# Clone the repository
+git clone https://github.com/jsildura/UPC-Lookup.git
+```
+or
+Download Here [Link](https://github.com/user-attachments/files/21915515/UPC_Lookup.v1.1.zip)
+Unzip the file
+
+1. Open extensions page:
+   - **Chrome**: `chrome://extensions/`
+   - **Edge**: `edge://extensions/`
+   - **Brave**: `brave://extensions/`
+   - **Firefox**: `about:debugging#/runtime/this-firefox`
+2. **Enable Developer mode** (toggle in top right)
+3. Click **"Load unpacked"** (or "Load Temporary Add-on" in Firefox)
+4. **Select the project folder**
 5. **Pin the extension** to your toolbar for easy access
 
 ## Usage
@@ -44,9 +56,6 @@ A Chrome browser extension that provides dual-pane UPC barcode lookup functional
 2. **Enter a UPC barcode** (numbers only)
 3. **Click Search** press Enter
 4. **View results** in both panels simultaneously
-
-### Alternative Usage
-- **Right-click any selected numbers** on a webpage and choose "Lookup UPC" from the context menu
 
 ## File Structure
 
@@ -71,26 +80,6 @@ UPC_Lookup/
     ├── icon32.png         # 32x32 extension icon
     └── icon128.png        # 128x128 extension icon
 ```
-### Setup
-```bash
-# Clone the repository
-git clone https://github.com/jsildura/UPC-Lookup.git
-```
-or
-Download Here Link
-Unzip the file
-
-## Load in Chrome/Edge/Brave/Firefox
-1. Open extensions page:
-   - **Chrome**: `chrome://extensions/`
-   - **Edge**: `edge://extensions/`
-   - **Brave**: `brave://extensions/`
-   - **Firefox**: `about:debugging#/runtime/this-firefox`
-2. **Enable Developer mode** (toggle in top right)
-3. Click **"Load unpacked"** (or "Load Temporary Add-on" in Firefox)
-4. **Select the project folder**
-5. **Pin the extension** to your toolbar for easy access
-
 ## Technical Details
 
 ### Cross-Origin Request Handling
