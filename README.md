@@ -132,12 +132,6 @@ The extension requires the following permissions:
 - `storage`: For storing user preferences and selected UPC codes
 - `host_permissions`: Access to barcodelookup.com and upcitemdb.com
 
-## Browser Compatibility
-
-- **Chrome**: Fully supported (Manifest V3)
-- **Edge**: Compatible with Chromium-based Edge
-- **Firefox**: Requires manifest conversion for Firefox Add-ons
-
 ## Troubleshooting
 
 ### Common Issues
