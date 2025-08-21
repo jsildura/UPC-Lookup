@@ -30,6 +30,14 @@ A Chrome browser extension that provides dual-pane UPC barcode lookup functional
 - Product images
 - UPC validation and verification
 
+## Screenshots
+<img width="717" height="464" alt="Screenshot_4" src="https://github.com/user-attachments/assets/6945b83d-8593-4aa5-8cdd-bed6e7736b45" />
+<img width="714" height="361" alt="Screenshot_5" src="https://github.com/user-attachments/assets/c1f048b9-28c4-41fd-88e6-68bc15d64961" />
+<img width="715" height="351" alt="Screenshot_6" src="https://github.com/user-attachments/assets/2299f512-abd5-447c-ad2b-5ab4d32cd1b6" />
+<img width="720" height="604" alt="Screenshot_7" src="https://github.com/user-attachments/assets/a227bbcd-b1b5-4219-89f3-ba46fb5d6122" />
+<img width="719" height="602" alt="Screenshot_8" src="https://github.com/user-attachments/assets/7de4531c-4694-4b8a-acb5-3e29711fd97a" />
+<img width="715" height="599" alt="Screenshot_9" src="https://github.com/user-attachments/assets/3cc4c7fc-5154-4d24-8d47-a678a8362ace" />
+<img width="717" height="601" alt="Screenshot_10" src="https://github.com/user-attachments/assets/fe30a83c-a884-4096-80d0-1b0e9f85e2a3" />
 
 ## Installation Chrome/Edge/Brave/Firefox
 ```bash
