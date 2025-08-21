@@ -30,6 +30,12 @@ A Chrome browser extension that provides dual-pane UPC barcode lookup functional
 - Product images
 - UPC validation and verification
 
+### Go-UPC.com
+- Additional product verification and details
+- Alternative data source for cross-validation
+- Enhanced product information coverage
+- Backup lookup when primary sources fail
+
 ## Screenshots
 <img width="717" height="464" alt="Screenshot_4" src="https://github.com/user-attachments/assets/6945b83d-8593-4aa5-8cdd-bed6e7736b45" />
 <img width="714" height="361" alt="Screenshot_5" src="https://github.com/user-attachments/assets/c1f048b9-28c4-41fd-88e6-68bc15d64961" />
