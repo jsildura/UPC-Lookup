@@ -1,6 +1,6 @@
 # UPC Barcode Lookup Extension
 
-A Chrome browser extension that provides dual-pane UPC barcode lookup functionality, fetching product information from both barcodelookup.com, upcitemdb.com & go-upc.com
+A Chrome browser extension that provides triple-pane UPC barcode lookup functionality, fetching product information from both barcodelookup.com, upcitemdb.com & go-upc.com
 
 ![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 ![Manifest V3](https://img.shields.io/badge/Manifest-V3-green?style=for-the-badge)
@@ -8,11 +8,18 @@ A Chrome browser extension that provides dual-pane UPC barcode lookup functional
 
 ## Features
 
-- **Dual-pane interface**: Side-by-side results from two popular barcode databases
-- **Number-only input validation**: Accepts UPC codes in any format but filters to numbers only
-- **Cross-origin data fetching**: Uses content scripts and background workers for reliable data retrieval
-- **Modern UI**: Clean, responsive design with loading states and error handling
-- **Context menu integration**: Right-click selected numbers to lookup UPC codes
+- **Triple-pane interface**: Side-by-side results from three popular barcode databases (BarcodeLookup, UPCItemDB, and Go-UPC)
+- **Individual provider toggles**: Enable/disable each database provider independently with visual status indicators
+- **Smart input validation**: Accepts UPC codes in any format but filters to numbers only with minimum length validation
+- **Advanced caching system**: Intelligent result caching with automatic cleanup and cache status indicators
+- **Context menu integration**: Right-click selected numbers anywhere on web pages to lookup UPC codes instantly
+- **Cross-origin data fetching**: Uses content scripts, background service workers, and proxy services for reliable data retrieval
+- **Dark/light theme support**: Automatic system theme detection with manual toggle and smooth transitions
+- **Progressive loading**: Individual provider results load independently with real-time status updates
+- **License management**: Built-in licensing system.
+- **Enhanced error handling**: Comprehensive error reporting with fallback mechanisms and user-friendly messages
+- **Image Click to Expand Support**: Click-to-expand product images with full-screen modal display
+- **Persistent storage**: Chrome storage API integration for settings, cache, and user preferences
 
 ## Data Sources
 
