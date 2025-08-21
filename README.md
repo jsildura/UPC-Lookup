@@ -71,6 +71,25 @@ UPC_Lookup/
     ├── icon32.png         # 32x32 extension icon
     └── icon128.png        # 128x128 extension icon
 ```
+### Setup
+```bash
+# Clone the repository
+git clone https://github.com/jsildura/UPC-Lookup.git
+```
+or
+Download Here Link
+Unzip the file
+
+# Load in Chrome/Edge/Brave/Firefox
+1. Open extensions page:
+   - **Chrome**: `chrome://extensions/`
+   - **Edge**: `edge://extensions/`
+   - **Brave**: `brave://extensions/`
+   - **Firefox**: `about:debugging#/runtime/this-firefox`
+2. **Enable Developer mode** (toggle in top right)
+3. Click **"Load unpacked"** (or "Load Temporary Add-on" in Firefox)
+4. **Select the project folder**
+5. **Pin the extension** to your toolbar for easy access
 
 ## Technical Details
 
