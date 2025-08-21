@@ -56,6 +56,7 @@ A Chrome browser extension that provides triple-pane UPC barcode lookup function
 ```bash
 # Clone the repository
 git clone https://github.com/jsildura/UPC-Lookup.git
+cd UPC-Lookup
 ```
 or
 Download Here [Link](https://github.com/user-attachments/files/21915515/UPC_Lookup.v1.1.zip)
@@ -78,6 +79,15 @@ Unzip the file
 2. **Enter a UPC barcode** (numbers only)
 3. **Click Search** press Enter
 4. **View results** in both panels simultaneously
+
+## Platform Compatibility
+This extension is compatible with all major browsers across Windows, macOS, and Linux:
+
+| Platform | Chrome | Brave | Edge | Firefox | Status |
+|----------|--------|-------|------|---------|--------|
+| **Windows** | ✅ | ✅ | ✅ | ✅ | Full Support |
+| **macOS** | ✅ | ✅ | ✅ | ✅ | Full Support |
+| **Linux** | ✅ | ✅ | ✅ | ✅ | Full Support |
 
 ## File Structure
 
