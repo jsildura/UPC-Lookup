@@ -80,7 +80,7 @@ or
 Download Here Link
 Unzip the file
 
-# Load in Chrome/Edge/Brave/Firefox
+## Load in Chrome/Edge/Brave/Firefox
 1. Open extensions page:
    - **Chrome**: `chrome://extensions/`
    - **Edge**: `edge://extensions/`
