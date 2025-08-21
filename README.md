@@ -141,8 +141,10 @@ The extension requires the following permissions:
 
 ## Feedback
 
-We're constantly improving the extension! Please report any issues or suggest features through the extension's feedback option.
+We're constantly improving the extension! Please report any issues or suggest features.
 
 ## Support
 
 For issues or feature requests, please check the extension's error console or contact the developer.
+- Contact: sildura.joelito.t@gmail.com
+- Report issues: GitHub Issues
