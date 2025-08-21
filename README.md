@@ -1,6 +1,6 @@
 # UPC Barcode Lookup Extension
 
-A Chrome browser extension that provides dual-pane UPC barcode lookup functionality, fetching product information from both BarcodeLookup.com and UPCItemDB.com.
+A Chrome browser extension that provides dual-pane UPC barcode lookup functionality, fetching product information from both barcodelookup.com, upcitemdb.com & go-upc.com
 
 ![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 ![Manifest V3](https://img.shields.io/badge/Manifest-V3-green?style=for-the-badge)
