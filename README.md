@@ -75,7 +75,7 @@ Unzip the file
 
 or follow this instead
 
-https://github.com/user-attachments/assets/81007c9f-c1ae-4e0a-9a63-efd792f94e78
+https://github.com/user-attachments/assets/0591321b-6456-4891-91ff-339b58866ecd
 
 ## Usage
 
