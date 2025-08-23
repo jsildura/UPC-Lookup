@@ -84,6 +84,10 @@ https://github.com/user-attachments/assets/0591321b-6456-4891-91ff-339b58866ecd
 3. **Click Search** press Enter
 4. **View results** in both panels simultaneously
 
+## Demo
+
+https://github.com/user-attachments/assets/1358b0c7-ebc8-41c1-a0a7-09581cce768c
+
 ## Platform Compatibility
 This extension is compatible with all major browsers across Windows, macOS, and Linux:
 
@@ -93,7 +97,7 @@ This extension is compatible with all major browsers across Windows, macOS, and 
 | **macOS** | ✅ | ✅ | ✅ | ✅ | Full Support |
 | **Linux** | ✅ | ✅ | ✅ | ✅ | Full Support |
 
-## File Structure
+## App Structure
 
 ```
 UPC_Lookup/
@@ -160,6 +164,8 @@ The extension requires the following permissions:
   - Clear "No results found" messaging with relevant icons
   - Better error states and user feedback
   - Improved handling of edge cases in search results
+  - triple-pane UPC lookup
+
 - **v1.0**: Initial release with dual-pane lookup functionality
 
 ## Known Issues
