@@ -73,6 +73,10 @@ Unzip the file
 4. **Select the project folder**
 5. **Pin the extension** to your toolbar for easy access
 
+or follow this instead
+
+https://github.com/user-attachments/assets/81007c9f-c1ae-4e0a-9a63-efd792f94e78
+
 ## Usage
 
 1. **Click the extension icon** in your Chrome toolbar
