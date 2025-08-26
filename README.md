@@ -52,7 +52,17 @@ A Chrome browser extension that provides triple-pane UPC barcode lookup function
 <img width="715" height="599" alt="Screenshot_9" src="https://github.com/user-attachments/assets/3cc4c7fc-5154-4d24-8d47-a678a8362ace" />
 <img width="717" height="601" alt="Screenshot_10" src="https://github.com/user-attachments/assets/fe30a83c-a884-4096-80d0-1b0e9f85e2a3" />
 
-## Installation Chrome/Edge/Brave/Firefox
+# UPC Barcode Lookup Tool
+
+## Installation
+
+### Option 1: Chrome Web Store (Recommended)
+Install directly from the Chrome Web Store:
+**[UPC Barcode Lookup Tool](https://chromewebstore.google.com/detail/UPC%20Barcode%20Lookup%20Tool/ebofpcggihdkfneflafnmdcehnadjpod?hl=en&authuser=0)**
+
+### Option 2: Manual Installation (Chrome/Edge/Brave/Firefox)
+
+#### Download the Extension
 ```bash
 # Clone the repository
 git clone https://github.com/jsildura/UPC-Lookup.git
@@ -63,6 +73,7 @@ Download Here [Link](https://github.com/user-attachments/files/21915515/UPC_Look
 
 Unzip the file
 
+#### Install Steps
 1. Open extensions page:
    - **Chrome**: `chrome://extensions/`
    - **Edge**: `edge://extensions/`
@@ -73,9 +84,10 @@ Unzip the file
 4. **Select the project folder**
 5. **Pin the extension** to your toolbar for easy access
 
-or follow this instead
+#### Video Tutorial
+Follow this video guide for manual installation:
 
-https://github.com/user-attachments/assets/0591321b-6456-4891-91ff-339b58866ecd
+https://github.com/user-attachments/assets/ccf16cef-31b9-4d5d-b59e-5bbe8e2b554b
 
 ## Usage
 
