@@ -57,8 +57,8 @@ A Chrome browser extension that provides triple-pane UPC barcode lookup function
 ## Installation
 
 ### Option 1: Chrome Web Store (Recommended)
-Install directly from the Chrome Web Store:
-**[UPC Barcode Lookup Tool](https://chromewebstore.google.com/detail/UPC%20Barcode%20Lookup%20Tool/ebofpcggihdkfneflafnmdcehnadjpod?hl=en&authuser=0)**
+
+[![Available in the Chrome Web Store](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)](https://chromewebstore.google.com/detail/UPC%20Barcode%20Lookup%20Tool/ebofpcggihdkfneflafnmdcehnadjpod?hl=en&authuser=0)
 
 ### Option 2: Manual Installation (Chrome/Edge/Brave/Firefox)
 
