@@ -73,7 +73,7 @@ git clone https://github.com/jsildura/UPC-Lookup.git
 cd UPC-Lookup
 ```
 or
-Download Here [Link](https://github.com/user-attachments/files/21915515/UPC_Lookup.v1.1.zip)
+Download Here [Link](https://github.com/user-attachments/files/22021116/UPC_Lookup.zip)
 
 Unzip the file
 
